@@ -21,8 +21,15 @@ they catch real problems without waking people up for nothing.
 Many heartbeat tools also offer a **failure URL**: the job calls it when it fails, and the alert opens at once,
 without waiting for the deadline, ideally with the job's error output.
 
-Note that Jira Service Management's own heartbeats are not available on the Free and Standard plans
-([Atlassian](https://support.atlassian.com/opsgenie/docs/advanced-alert-configurations-after-migration/)).
+Jira Service Management also has its own heartbeats, depending on the plan (Atlassian changed the packaging
+in 2026, so check yours). Two details are worth knowing before you wire them into many jobs
+([Atlassian Community](https://community.atlassian.com/forums/discussion/3283010/heartbeat-ping-through-integration-api)):
+
+- the ping API needs an Atlassian account's API token with the `write:ops-config` scope, so every server
+  that runs a job holds a personal credential that can also change operations configuration;
+- the ping answers "PONG" even when the heartbeat name is wrong, so a typo looks like a success. Always check
+  that the heartbeat itself turns healthy after the first run.
+
 The patterns below work with any heartbeat URL.
 
 ## Linux: cron

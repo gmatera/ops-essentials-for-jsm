@@ -26,13 +26,16 @@ The last three items are the ones that most often get lost, because nobody think
 ## 2. Check each item against the plan
 
 Alerting, on-call schedules and escalations are part of Jira Service Management's operations features.
-Some capabilities depend on the plan. One example that matters to many teams: **heartbeat monitoring is not
-available on the Free and Standard plans** ([Atlassian](https://support.atlassian.com/opsgenie/docs/advanced-alert-configurations-after-migration/)).
-Opsgenie heartbeats on those sites need either an upgrade or a replacement.
+Some capabilities depend on the plan, and the packaging is changing. Heartbeats are a good example:
+Atlassian's migration documentation lists them only for Premium and Enterprise
+([Atlassian](https://support.atlassian.com/opsgenie/docs/feature-changes-and-deprecations-in-jira-service-management/)),
+while in November 2026 Atlassian support confirmed that heartbeat monitoring is now part of the Service
+Collection Standard plan and that the documentation is being updated
+([Atlassian Community](https://community.atlassian.com/forums/discussion/3316996)).
 
-For reporting, stakeholder communication and data retention, open the current plan comparison for your site
-and check each item from your inventory. Plans change over time; the comparison page is the only reliable
-source.
+So for every item in your inventory, including heartbeats, reporting, stakeholder communication and data
+retention, check the current plan comparison for your own site, and ask Atlassian support when the pages
+disagree.
 
 ## 3. Decide per item: upgrade, replace or drop
 
@@ -54,6 +57,10 @@ running is discovered on the day you need the backup.
 
 - Export the list of Opsgenie heartbeats with their intervals and owning teams.
 - Mark the ones that still matter. For each one, note which job calls it and from which server.
+- Check how the jobs will authenticate. In Opsgenie a ping used an API key; in Jira Service Management the
+  heartbeat ping API needs an Atlassian account's API token with the `write:ops-config` scope
+  ([Atlassian Community](https://community.atlassian.com/forums/discussion/3283010/heartbeat-ping-through-integration-api)).
+  Decide whose token that is, where it is stored on each server, and who renews it.
 - Move them before you turn Opsgenie off, and run old and new side by side for a few days.
 - Test every heartbeat once on purpose: stop the job, or call the failure URL, and check that the right team
   is alerted.
