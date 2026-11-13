@@ -21,7 +21,8 @@ searchable.
 - **No servers of ours.** The app runs on Atlassian Forge and keeps its data in your site's Forge storage.
   Data leaves Atlassian only towards the messaging channels you configure.
 
-Available on the Atlassian Marketplace, priced per agent, with a 30-day free trial.
+**[Get it on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/2213311074/ops-essentials-for-jira-service-management?utm_source=site&utm_medium=app-page&utm_campaign=ops-essentials-jsm)**:
+priced per agent, with a 30-day free trial.
 
 ## Documentation
 
