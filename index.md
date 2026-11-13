@@ -24,10 +24,24 @@ searchable.
 **[Get it on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/2213311074/ops-essentials-for-jira-service-management?utm_source=site&utm_medium=app-page&utm_campaign=ops-essentials-jsm)**:
 priced per agent, with a 30-day free trial.
 
+## See it in two minutes
+
+<video controls preload="metadata" width="100%" poster="assets/demo-poster.jpg">
+  <source src="assets/demo.mp4" type="video/mp4">
+  <a href="assets/demo.mp4">Watch the demo (MP4, 4.4 MB)</a>
+</video>
+
 ## Documentation
 
 - [User guide](user-guide.md): installation, heartbeats, reports, stakeholder updates, archive, data and
   privacy.
+- [One-pager (PDF)](assets/ops-essentials-for-jsm.pdf): features, use cases and requirements on one page.
 - [Support](https://steadyseam.com/support.html#ops-essentials-for-jsm)
 - [Privacy policy](privacy-policy.md), [Data Processing Addendum](dpa.md), [Terms](terms.md),
   [Security](security.md)
+
+## Guides
+
+- [Moving from Opsgenie to Jira Service Management Standard: what to plan for](guides/opsgenie-to-jira-service-management-standard.md)
+- [Heartbeat monitoring for cron jobs and backups in Jira Service Management](guides/heartbeat-monitoring-cron-jobs-jira-service-management.md)
+- [Incident updates for people without a Jira license: Slack, Teams, Google Chat and e-mail](guides/incident-updates-for-stakeholders-without-jira-license.md)

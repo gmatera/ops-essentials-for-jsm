@@ -146,6 +146,9 @@ A rule can be paused and resumed.
 - **A heartbeat alert does not open or close:** check the background job on the **Overview** tab and the time
   of the last call on the **Heartbeats** tab. Run the `curl` command by hand on the job's server: with
   `-fsS` it prints any error.
+- **"Your Jira Service Management plan does not include operations alerts":** the site's plan has no
+  operations alerts, so heartbeat alerts, reports and the archive cannot work. The app checks again every 6
+  hours; after changing the plan, press **Test connection** to check at once.
 - **A stakeholder update does not arrive:** check its result in **Recent updates** and press **Send test** on
   the channel.
 
